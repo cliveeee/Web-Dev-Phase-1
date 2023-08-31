@@ -5,3 +5,11 @@
         display: none;
     }
 }
+
+/* CSS for desktop header */
+.header-desktop {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+}
+
