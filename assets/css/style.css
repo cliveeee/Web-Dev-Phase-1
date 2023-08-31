@@ -1,4 +1,8 @@
 
+body {
+    background-color: white;
+    margin: 0;
+}
 /* CSS for hiding navigation and aside on mobile */
 @media (max-width: 768px) {
     nav, aside {
@@ -11,5 +15,35 @@
     background-color: #333;
     color: white;
     padding: 30px;
+}
+
+/* CSS for desktop navigation */
+.desktop-nav {
+    background-color: #444;
+    padding: 10px;
+}
+
+.desktop-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.desktop-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CSS for main content */
+.main-content {
+    background-color: #222;
+    padding: 10px;
+    color: white;
+    margin: 0 80px;
 }
 
