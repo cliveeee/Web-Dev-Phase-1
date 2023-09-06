@@ -1,8 +1,9 @@
-
 body {
     background-color: white;
     margin: 0;
+    overflow-x: hidden;
 }
+
 /* CSS for hiding navigation and aside on mobile */
 @media (max-width: 768px) {
     nav, aside {
@@ -15,12 +16,18 @@ body {
     background-color: #333;
     color: white;
     padding: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 /* CSS for desktop navigation */
 .desktop-nav {
     background-color: #444;
     padding: 10px;
+    position: fixed;
+    top: 50px;
+    width: 100%;
 }
 
 .desktop-nav ul {
@@ -44,6 +51,24 @@ body {
     background-color: #222;
     padding: 10px;
     color: white;
-    margin: 0 80px;
+    margin: 0 20px;
+    margin-top: 100px;
 }
 
+/* CSS for articles */
+article {
+    border: 1px solid white;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* CSS for footer */
+.footer-desktop {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
