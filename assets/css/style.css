@@ -7,7 +7,7 @@ body {
 
 /* CSS for hiding navigation and aside on mobile */
 @media (max-width: 768px) {
-    nav, aside {
+    nav, .aside-column {
         display: none;
     }
 }
@@ -75,7 +75,6 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     grid-column: span 2;
-
 }
 
 /* CSS for aside column */
@@ -85,6 +84,26 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     margin-bottom: 50px;
+}
+
+.aside-column section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.aside-column section header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.aside-column section footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* CSS for footer */
@@ -97,4 +116,16 @@ body {
     left: 0;
     width: 100%;
     text-align: center;
+}
+/* Media query for mobile mode */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "article-column1"
+            "article-column2"
+            "article-column3"
+            "article-column4"
+            "article-column5";
+    }
 }
