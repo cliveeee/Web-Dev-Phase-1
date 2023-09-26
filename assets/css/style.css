@@ -1,6 +1,6 @@
 /* Reset some default styles */
 body {
-    background-color: white;
+    background-color: #edede9;
     margin: 0;
     overflow-x: hidden;
 }
@@ -14,7 +14,7 @@ body {
 
 /* CSS for the header */
 .header-desktop {
-    background-color: #333;
+    background-color: #d5bdaf;
     color: white;
     padding: 30px;
     position: fixed;
@@ -24,13 +24,30 @@ body {
     z-index: 2;
 }
 
+/*  styles for the logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 20px;
+}
+
+
 /* CSS for desktop navigation */
 .desktop-nav {
-    background-color: #444;
+    background-color: #e3d5ca;
     color: white;
     padding: 10px;
     position: fixed;
-    top: 50px;
+    top: 85px;
     left: 0;
     width: 100%;
     z-index: 2;
@@ -48,7 +65,7 @@ body {
 }
 
 .desktop-nav a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -63,14 +80,14 @@ body {
         "article-column3 article-column3 article-column4 article-column4 aside-column"
         "article-column5 article-column5 article-column5 article-column5 aside-column";
     gap: 1rem;
-    margin: 100px 60px 0;
+    margin: 115px 60px 0;
     padding: 20px;
     overflow: auto;
 }
 
 /* CSS for article columns */
 .article-column {
-    background-color: #f0f0f0;
+    background-color: #f5ebe0;
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
@@ -80,7 +97,7 @@ body {
 /* CSS for aside column */
 .aside-column {
     grid-area: aside-column;
-    background-color: #f0f0f0;
+    background-color: #f5ebe0;
     padding: 10px;
     border: 1px solid #ccc;
     margin-bottom: 50px;
@@ -92,15 +109,15 @@ body {
     margin-bottom: 20px;
 }
 .aside-column section header {
-    background-color: #333;
-    color: white;
+    background-color:  #e3d5ca;
+    color: black;
     padding: 10px;
     margin-top: 10px;
     text-align: center;
 }
 .aside-column section footer {
-    background-color: #333;
-    color: white;
+    background-color:  #e3d5ca;
+    color: black;
     padding: 10px;
     margin-top: 10px;
     text-align: center;
@@ -108,7 +125,7 @@ body {
 
 /* CSS for footer */
 .footer-desktop {
-    background-color: #333;
+    background-color: #d5bdaf;
     color: white;
     padding: 20px;
     position: fixed;
@@ -129,3 +146,7 @@ body {
             "article-column5";
     }
 }
+
+
+
+
