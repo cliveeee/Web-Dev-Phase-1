@@ -147,6 +147,37 @@ body {
     }
 }
 
+/* Style for images in article sections */
+.article-column img {
+    max-width: 100%;
+    height: auto;
+}
 
+/* Style for images in aside sections */
+.aside-column img {
+    max-width: 100%;
+    height: auto;
+}
 
+/* Style for footer navigation */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin-right: 20px; /* Adjust the spacing between items as needed */
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+    font-weight: bold;
+}
+
+.footer-nav a:hover {
+    color: #555; /* Adjust the hover color as needed */
+}
 
