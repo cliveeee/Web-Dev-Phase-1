@@ -5,14 +5,24 @@ body {
     overflow-x: hidden;
 }
 
-/* CSS for hiding navigation and aside on mobile */
-@media (max-width: 768px) {
-    nav, .aside-column {
-        display: none;
-    }
+/* Style for the hamburger menu */
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin-right: 40px;
 }
 
-/* CSS for the header */
+/* Style for the bars in the hamburger menu */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* CSS for the header  */
+.header-mobile,
 .header-desktop {
     background-color: #d5bdaf;
     color: white;
@@ -24,7 +34,7 @@ body {
     z-index: 2;
 }
 
-/*  styles for the logo */
+/* Styles for the logo  */
 .logo {
     display: flex;
     align-items: center;
@@ -40,9 +50,9 @@ body {
     font-size: 20px;
 }
 
-
-/* CSS for desktop navigation */
+/* CSS for navigation  */
 .desktop-nav {
+    display: none; /* Hide desktop navigation by default on mobile */
     background-color: #e3d5ca;
     color: white;
     padding: 10px;
@@ -69,23 +79,18 @@ body {
     text-decoration: none;
 }
 
-/* CSS for main content grid container */
+/* CSS for main content grid container  */
 .main-content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas:
-        "article-column1 article-column1 article-column2 article-column2 aside-column"
-        "article-column1 article-column1 article-column2 article-column2 aside-column"
-        "article-column3 article-column3 article-column4 article-column4 aside-column"
-        "article-column3 article-column3 article-column4 article-column4 aside-column"
-        "article-column5 article-column5 article-column5 article-column5 aside-column";
+    grid-template-columns: 1fr;
+    grid-template-areas: "article-column1";
     gap: 1rem;
-    margin: 115px 60px 0;
+    margin: 115px 0 0;
     padding: 20px;
     overflow: auto;
 }
 
-/* CSS for article columns */
+/* CSS for article columns  */
 .article-column {
     background-color: #f5ebe0;
     border: 1px solid #ccc;
@@ -94,8 +99,9 @@ body {
     grid-column: span 2;
 }
 
-/* CSS for aside column */
+/* CSS for aside column  */
 .aside-column {
+    display: none;
     grid-area: aside-column;
     background-color: #f5ebe0;
     padding: 10px;
@@ -103,27 +109,7 @@ body {
     margin-bottom: 50px;
 }
 
-.aside-column section {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-.aside-column section header {
-    background-color:  #e3d5ca;
-    color: black;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-.aside-column section footer {
-    background-color:  #e3d5ca;
-    color: black;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-/* CSS for footer */
+/* Style for footer */
 .footer-desktop {
     background-color: #d5bdaf;
     color: white;
@@ -134,20 +120,8 @@ body {
     width: 100%;
     text-align: center;
 }
-/* Media query for mobile mode */
-@media (max-width: 768px) {
-    .main-content {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "article-column1"
-            "article-column2"
-            "article-column3"
-            "article-column4"
-            "article-column5";
-    }
-}
 
-/* Style for images in article sections */
+/* Style for images in article sections  */
 .article-column img {
     max-width: 100%;
     height: auto;
@@ -168,16 +142,40 @@ body {
 
 .footer-nav li {
     display: inline;
-    margin-right: 20px; /* Adjust the spacing between items as needed */
+    margin-right: 20px;
 }
 
 .footer-nav a {
     text-decoration: none;
-    color: #333; /* Adjust the color as needed */
+    color: #333;
     font-weight: bold;
 }
 
 .footer-nav a:hover {
-    color: #555; /* Adjust the hover color as needed */
+    color: #555;
 }
 
+/* CSS for showing navigation and aside on desktop */
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: block;
+    }
+    .aside-column {
+        display: block;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Adjusting the main content grid for larger screens (desktop) */
+    .main-content {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas:
+            "article-column1 article-column1 article-column2 article-column2 aside-column"
+            "article-column1 article-column1 article-column2 article-column2 aside-column"
+            "article-column3 article-column3 article-column4 article-column4 aside-column"
+            "article-column3 article-column3 article-column4 article-column4 aside-column"
+            "article-column5 article-column5 article-column5 article-column5 aside-column";
+        margin: 115px 60px 0;
+    }
+}
