@@ -21,7 +21,7 @@ body {
     margin: 4px 0;
 }
 
-/* CSS for the header  */
+/* CSS for the header (both mobile and desktop) */
 .header-mobile,
 .header-desktop {
     background-color: #d5bdaf;
@@ -34,7 +34,7 @@ body {
     z-index: 2;
 }
 
-/* Styles for the logo  */
+/* Styles for the logo */
 .logo {
     display: flex;
     align-items: center;
@@ -50,9 +50,9 @@ body {
     font-size: 20px;
 }
 
-/* CSS for navigation  */
+/* CSS for navigation */
 .desktop-nav {
-    display: none; /* Hide desktop navigation by default on mobile */
+    display: none;
     background-color: #e3d5ca;
     color: white;
     padding: 10px;
@@ -79,18 +79,18 @@ body {
     text-decoration: none;
 }
 
-/* CSS for main content grid container  */
+/* CSS for main content grid container (mobile-first) */
 .main-content {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "article-column1";
     gap: 1rem;
-    margin: 115px 0 0;
+    margin: 115px 0 50px;
     padding: 20px;
     overflow: auto;
 }
 
-/* CSS for article columns  */
+/* CSS for article columns */
 .article-column {
     background-color: #f5ebe0;
     border: 1px solid #ccc;
@@ -99,7 +99,7 @@ body {
     grid-column: span 2;
 }
 
-/* CSS for aside column  */
+/* CSS for aside column (hidden by default) */
 .aside-column {
     display: none;
     grid-area: aside-column;
@@ -109,7 +109,8 @@ body {
     margin-bottom: 50px;
 }
 
-/* Style for footer */
+/* Style for footer (both mobile and desktop) */
+.footer-mobile,
 .footer-desktop {
     background-color: #d5bdaf;
     color: white;
@@ -121,7 +122,7 @@ body {
     text-align: center;
 }
 
-/* Style for images in article sections  */
+/* Style for images in article sections */
 .article-column img {
     max-width: 100%;
     height: auto;
@@ -131,6 +132,13 @@ body {
 .aside-column img {
     max-width: 100%;
     height: auto;
+}
+
+/* Centering the text in aside footer and setting text color to white */
+.aside-column footer {
+    text-align: center;
+    background-color: #d5bdaf;
+    color: white;
 }
 
 /* Style for footer navigation */
@@ -160,9 +168,11 @@ body {
     .desktop-nav {
         display: block;
     }
+
     .aside-column {
         display: block;
     }
+
     .hamburger-menu {
         display: none;
     }
@@ -174,8 +184,8 @@ body {
             "article-column1 article-column1 article-column2 article-column2 aside-column"
             "article-column1 article-column1 article-column2 article-column2 aside-column"
             "article-column3 article-column3 article-column4 article-column4 aside-column"
-            "article-column3 article-column3 article-column4 article-column4 aside-column"
-            "article-column5 article-column5 article-column5 article-column5 aside-column";
-        margin: 115px 60px 0;
+            "article-column3 article-column3 article-column4 article-column4 aside-column";
+        margin: 115px 60px 20px;
     }
 }
+
