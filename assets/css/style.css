@@ -177,6 +177,8 @@ body {
         display: none;
     }
 
+
+
     /* Adjusting the main content grid for larger screens (desktop) */
     .main-content {
         grid-template-columns: repeat(5, 1fr);
@@ -187,5 +189,48 @@ body {
             "article-column3 article-column3 article-column4 article-column4 aside-column";
         margin: 115px 60px 20px;
     }
+}
+
+/* Style for the form */
+form {
+    background-color: #f5ebe0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for form labels */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for input fields */
+form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the submit button */
+form button {
+    background-color: #d5bdaf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the response container */
+form #jokesResponse {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
