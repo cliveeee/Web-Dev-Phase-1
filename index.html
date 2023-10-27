@@ -116,7 +116,16 @@
     <aside class="aside-column">
         <section>
             <header></header>
+
+            <form id="jokeForm">
+                <h2>Jokes</h2>
+                <label for="numberOfJokes">Number of Jokes:</label>
+                <input type="number" id="numberOfJokes" name="numberOfJokes" placeholder="Enter number of jokes" required>
+                <button type="submit" id="getJokesBtn">Get Jokes</button>
+                <div id="jokesResponse"></div>
+            </form>
             <h2>THAT'S MY LECTURE</h2>
+
             <img src="assets/img/img5.jpg" alt="Image 2">
             <p>Anyone attending an IT lecture should expect that the lecturer knows the subject.
                 But IT lecturers are a funny lot.</p>
