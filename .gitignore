@@ -106,3 +106,4 @@ Temporary Items
 .apdisk
 # Custom stuff
 node_modules/
+.idea/
