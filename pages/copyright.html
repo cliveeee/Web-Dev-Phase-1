@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CLIVE CHIPUNZI | Web Tech | Cert 4 Prog</title>
 
-
-
-
     <link rel="stylesheet" href="/assets/css/site.css">
-
-
-
+    <!-- Include Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 </head>
+
 <body class="font-sans bg-gray-100">
 
 <header class="bg-blue-500 text-white shadow-md p-4">
@@ -21,7 +19,7 @@
         <h1 class="text-xl font-bold">Certificate IV in IT (Programming) Web Tech Portfolio</h1>
         <img src="https://placehold.co/64?text=logo" alt="Logo">
     </div>
-    <nav>
+    <nav class="lg:hidden mt-2">
         <ul class="flex space-x-4">
             <li><a href="/index.html" class="text-white hover:underline">Home</a></li>
             <li><a href="/phase-1" class="text-white hover:underline">Phase 1</a></li>
@@ -38,14 +36,14 @@
 </main>
 
 <!-- Footer -->
-<footer class="flex flex-row gap-16 mt-8 bg-gray-300 p-4">
-    <div class="flex items-center space-x-4">
+<footer class="flex flex-col lg:flex-row gap-16 mt-8 bg-gray-300 p-4">
+    <div class="flex items-center space-x-4 mb-4 lg:mb-0">
         <img src="https://placehold.co/64?text=logo" alt="Logo">
-        <div class="text-sm text-center">
+        <div class="text-sm text-center lg:text-left">
             <p>&copy; Copyright 2023 Adrian Gould and Clive Chipunzi. All rights reserved.</p>
         </div>
     </div>
-    <div>
+    <div class="lg:flex lg:items-center lg:justify-end flex-grow">
         <ul class="flex space-x-4">
             <li><a href="#" class="text-blue-500 hover:underline">North Metro TAFE</a></li>
             <li><a href="#" class="text-blue-500 hover:underline">ScreenCraft Dev Sites</a></li>
@@ -54,5 +52,7 @@
         </ul>
     </div>
 </footer>
+
 </body>
+
 </html>
